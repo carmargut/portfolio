@@ -3,17 +3,7 @@ $(document).ready(function() {
     console.log("DOM inicializado")
 
     $("#button_submit").on("click", function(event) {
-        var name = $("#name").val(),
-            email = $("#email").val(),
-            message = $("#message").val(),
-            empty = false;
-        console.log("hola")
-
-        if (isEmpty(name)) {
-            empty = true;
-            alert("enter a name");
-            event.preventDefault();
-        }
+        
     });
 
 });
