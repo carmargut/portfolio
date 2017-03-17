@@ -3269,7 +3269,7 @@
 		}
 
 		.wrapper.style3 {
-			background-color: #D37528;
+			background-color: #c37436;
 		}
 
 		.wrapper.style3-alt {
@@ -3771,14 +3771,14 @@
 			}
 
 			#sidebar nav a:before {
-				background: #fd4f00 ;
+				background: #d37528 ;
 			}
 
 			#sidebar nav a:after {
-				background-image: -moz-linear-gradient(to right, #5e42a6, #fd4f00);
-				background-image: -webkit-linear-gradient(to right, #5e42a6, #fd4f00);
-				background-image: -ms-linear-gradient(to right, #5e42a6, #fd4f00);
-				background-image: linear-gradient(to right, #5e42a6, #fd4f00);
+				background-image: -moz-linear-gradient(to right, #5e42a6, #d37528);
+				background-image: -webkit-linear-gradient(to right, #5e42a6, #d37528);
+				background-image: -ms-linear-gradient(to right, #5e42a6, #d37528);
+				background-image: linear-gradient(to right, #5e42a6, #d37528);
 				-moz-transition: max-width 0.2s ease;
 				-webkit-transition: max-width 0.2s ease;
 				-ms-transition: max-width 0.2s ease;
