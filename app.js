@@ -25,6 +25,7 @@ app.get("/pruebas",function(request,response){
   response.render("elements",{});
 });
 
+
 app.listen(config.port, function() {
     console.log("Servidor corriendo en el puerto " + config.port);
 });
