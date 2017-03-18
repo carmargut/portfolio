@@ -6,6 +6,7 @@ var config = require('./config')
 var fs = require("fs");
 var https = require("https");
 var app = express();
+var http = express();
 
 var clavePrivada = fs.readFileSync(config.private_key).toString();
 var certificado = fs.readFileSync(config.certificate).toString();
@@ -19,6 +20,9 @@ app.use(express.static(path.join(__dirname, "public")));
 
 var servidor = https.createServer({ key: clavePrivada, ca: ca_bundle, cert: certificado }, app);
 
+http.get("/",function(request,response){
+  response.redirect("https://carmargut.com");
+});
 app.get("/", function(request, response) {
     response.render("index",{});
 });
@@ -27,7 +31,7 @@ app.get("/pruebas",function(request,response){
   response.render("elements",{});
 });
 
-
+http.listen(80,function(){});
 servidor.listen(config.port, function() {
     console.log("Servidor corriendo en el puerto " + config.port);
 });
