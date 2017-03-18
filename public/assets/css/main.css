@@ -2718,7 +2718,7 @@ text-align: center;
 }
 
 ul.actions:last-child {
-	margin-bottom: 0;
+	margin-bottom: 6px;
 }
 
 ul.actions li {
