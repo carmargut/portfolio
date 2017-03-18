@@ -16,22 +16,16 @@ app.set("view engine", "ejs");
 app.set("views", path.join(__dirname, "views"));
 app.use(express.static(path.join(__dirname, "public")));
 
-
-
 var servidor = https.createServer({ key: clavePrivada, ca: ca_bundle, cert: certificado }, app);
 
-http.get("/",function(request,response){
-  response.redirect("https://carmargut.com");
+http.get("*",(req,res) => {
+  res.redirect("https://carmargut.com");
 });
-app.get("/", function(request, response) {
-    response.render("index",{});
-});
-
-app.get("/pruebas",function(request,response){
-  response.render("elements",{});
+app.get("/",(req, res) => {
+    res.render("index",{});
 });
 
-http.listen(80,function(){});
-servidor.listen(config.port, function() {
+http.listen(80,() => {});
+servidor.listen(config.port, () => {
     console.log("Servidor corriendo en el puerto " + config.port);
 });
