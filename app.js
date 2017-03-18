@@ -8,15 +8,14 @@ var https = require("https");
 var app = express();
 var http = express();
 
-var clavePrivada = fs.readFileSync(config.private_key).toString();
-var certificado = fs.readFileSync(config.certificate).toString();
-var ca_bundle = fs.readFileSync(config.ca_bundle).toString();
+var clavePrivada = fs.readFileSync(config.private_key).;
+var certificado = fs.readFileSync(config.certificate);
 
 app.set("view engine", "ejs");
 app.set("views", path.join(__dirname, "views"));
 app.use(express.static(path.join(__dirname, "public")));
 
-var servidor = https.createServer({ key: clavePrivada, ca: ca_bundle, cert: certificado }, app);
+var servidor = https.createServer({ key: clavePrivada, cert: certificado }, app);
 
 http.get("*",(req,res) => {
   res.redirect("https://carmargut.com");
