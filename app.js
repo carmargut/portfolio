@@ -8,7 +8,7 @@ var https = require("https");
 var app = express();
 var http = express();
 
-var clavePrivada = fs.readFileSync(config.private_key).;
+var clavePrivada = fs.readFileSync(config.private_key);
 var certificado = fs.readFileSync(config.certificate);
 
 app.set("view engine", "ejs");
