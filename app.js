@@ -15,7 +15,7 @@ app.use(express.static(path.join(__dirname, "public")));
 
 var clavePrivada = fs.readFileSync(config.private_key);
 var certificado = fs.readFileSync(config.certificate);
-//var servidor = https.createServer({ key: clavePrivada, cert: certificado }, app);
+var servidor = https.createServer({ key: clavePrivada, cert: certificado }, app);
 
 app.get("/", function(request, response) {
     response.render("index",{});
@@ -26,6 +26,6 @@ app.get("/pruebas",function(request,response){
 });
 
 
-app.listen(config.port, function() {
+servidor.listen(config.port, function() {
     console.log("Servidor corriendo en el puerto " + config.port);
 });
