@@ -2718,6 +2718,11 @@ cursor: default;
 text-align: center;
 }
 
+ul.actions.intro {
+	cursor: default;
+	text-align: left;
+}
+
 ul.actions:last-child {
 	margin-bottom: 6px;
 }
