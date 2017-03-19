@@ -2,7 +2,8 @@
 
 var path = require("path");
 var express = require("express");
-var config = require('./config')
+var config = require('./config');
+var favicon = require("./serve-favicon");
 var fs = require("fs");
 var https = require("https");
 var app = express();
@@ -11,6 +12,7 @@ var http = express();
 app.set("view engine", "ejs");
 app.set("views", path.join(__dirname, "views"));
 app.use(express.static(path.join(__dirname, "public")));
+app.use(favicon(path.join(__dirname, 'public', 'favicon.ico')));
 
 var credentials = {
   key: fs.readFileSync(config.private_key),
