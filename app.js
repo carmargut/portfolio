@@ -20,7 +20,7 @@ var credentials = {
 }
 var server = https.createServer(credentials, app);
 
-http.get("*",(req,res) => {
+http.get("/",(req,res) => {
   res.redirect("https://carmargut.com");
 });
 app.get("/",(req, res) => {
