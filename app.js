@@ -17,7 +17,8 @@ app.use(favicon(path.join(__dirname, 'public', 'favicon.ico')));
 
 var credentials = {
   key: fs.readFileSync(config.private_key),
-  cert: fs.readFileSync(config.certificate)
+  cert: fs.readFileSync(config.certificate),
+  ca: fs.readFileSync(config.ca_bundle)
 }
 var server = https.createServer(credentials, app);
 
