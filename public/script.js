@@ -1,4 +1,4 @@
-
+pace.start();
 
 $(document).ready(function() {
     // DOM inicializado
