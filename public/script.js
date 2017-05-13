@@ -1,9 +1,3 @@
-
-
-function isEmpty(string) {
-    return string.length === 0 || !string.trim()
-}
-
 var progress = setInterval(function () {
     var $bar = $("#bar");
 
