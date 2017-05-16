@@ -8,7 +8,6 @@
 		<link rel="stylesheet" href="assets/css/main.css" />
 		<!--[if lte IE 9]><link rel="stylesheet" href="assets/css/ie9.css" /><![endif]-->
 		<!--[if lte IE 8]><link rel="stylesheet" href="assets/css/ie8.css" /><![endif]-->
-		<script src="/pace/pace.js"></script>
 		<link href="/pace/themes/top.css" rel="stylesheet" />
 	</head>
 	<body>
@@ -16,7 +15,10 @@
 
 		<!-- Sidebar -->
 			<section id="sidebar">
-				<div class="inner">
+					<div class="ProgressBar js-ProgressBar " id="grande">
+							<div class="ProgressBar-wrapper js-ProgressBar-wrapper inner"></div>
+					</div>
+					<div class="inner" id="pequeno">
 					<nav>
 						<ul>
 							<li><a href="#intro">Welcome</a></li>
@@ -27,10 +29,13 @@
 				</div>
 			</section>
 
+
 		<!-- Wrapper -->
-			<div id="wrapper">
+			<div id="wrapper" class="Content js-Content">
 
 				<!-- Intro -->
+				<div class="Content-text js-Content-text">
+					<h2 class="Content-title js-Content-title" data-id="intro" style="display: none;">Welcome</h2>
 					<section id="intro" class="wrapper style1 fullscreen fade-up">
 						<div class="inner">
 							<h1>Carlos Martínez</h1>
@@ -41,10 +46,13 @@
 							</ul>
 						</div>
 					</section>
+				</div>
 
 
 
 				<!-- One -->
+				<div class="Content-text js-Content-text">
+			    <h2 class="Content-title js-Content-title" data-id="one" id="2" style="display:none;">What I do</h2>
 					<section id="one" class="wrapper style3 fade-up">
 						<div class="inner">
 							<h2>Recent projects</h2>
@@ -105,8 +113,11 @@
 
 						</div>
 					</section>
+				</div>
 
 				<!-- Two -->
+				<div class="Content-text js-Content-text">
+    			<h2 class="Content-title js-Content-title" data-id="two" id="3" style="display:none;">Get in touch</h2>
 					<section id="two" class="wrapper style1 fade-up">
 						<div class="inner">
 							<h2>Get in touch</h2>
@@ -132,6 +143,7 @@
 									</ul>
 						</div>
 					</section>
+				</div>
 
 			</div>
 
@@ -146,6 +158,7 @@
 			</footer>
 
 		<!-- Scripts -->
+			<script src="/pace/pace.js"></script>
 			<script src="assets/js/jquery.min.js"></script>
 			<script src="assets/js/jquery.scrollex.min.js"></script>
 			<script src="assets/js/jquery.scrolly.min.js"></script>
@@ -153,8 +166,7 @@
 			<script src="assets/js/util.js"></script>
 			<!--[if lte IE 8]><script src="assets/js/ie/respond.min.js"></script><![endif]-->
 			<script src="assets/js/main.js"></script>
-			<script src="script.js"></script>
 			<script src="analytics.js"></script>
-
+			<script src="script.js"></script>
 	</body>
 </html>

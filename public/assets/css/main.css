@@ -4127,3 +4127,106 @@ ul.actions.vertical li {
   }
 }
 /* Extra stuff just to make the demo pretty. */
+
+
+
+/* scroll progress bar  */
+
+/**************************/
+/* Scrolling progress bar */
+/**************************/
+.ProgressBar {
+	position: absolute;
+  top: 147px;
+  left: 10%;
+	margin-top: 15%;
+}
+
+.ProgressBar-bar {
+  background-color: #ffffff;
+  display: block;
+  height: 100px;
+  position: relative;
+  width: 10px;
+}
+.ProgressBar-bar:last-child, .ProgressBar-bar:last-child .ProgressBar-avancement {
+  border-bottom-left-radius: 5px;
+  border-bottom-right-radius: 5px;
+}
+.ProgressBar-bar:first-child, .ProgressBar-bar:first-child .ProgressBar-avancement {
+  border-top-left-radius: 5px;
+  border-top-right-radius: 5px;
+}
+
+/* .ProgressBar-bar:last-child .ProgressBar-circle{
+  display: none;
+} */
+.ProgressBar-avancement {
+  background-color: #c37436;
+  border-bottom-left-radius: 5px;
+  border-bottom-right-radius: 5px;
+  display: block;
+  height: 0;
+  position: absolute;
+  top: 0;
+  width: 10px;
+  z-index: 0;
+}
+
+.ProgressBar-avancement--active {
+  border-radius: 0px;
+}
+
+.ProgressBar-circle {
+  background-color: #c37436;
+  border-radius: 15px;
+  box-shadow: inset 0 0 0 15px #ffffff;
+  top: -15px;
+  display: block;
+  height: 30px;
+  left: 50%;
+  margin-left: -15px;
+  position: absolute;
+  transition: box-shadow 0.3s;
+  width: 30px;
+  z-index: 10;
+}
+
+.ProgressBar-circle--active {
+  box-shadow: inset 0 0 0 0 #c37436;
+}
+
+.ProgressBar-caption {
+  color: #ffffff;
+  font-size: 15px;
+  text-decoration: none;
+  margin-top: -8px;
+  position: absolute;
+  right: 30px;
+  text-align: right;
+  top: 50%;
+  width: 200px;
+}
+.ProgressBar-caption:hover {
+  color: #c37436;
+}
+
+.ProgressBar-caption--active {
+  color: #c37436;
+}
+
+@media screen and (max-width: 1280px) {
+
+	#grande {
+		display: none !important;
+	}
+
+}
+
+@media screen and (min-width: 1279px) {
+
+	#pequeno {
+		display: none !important;
+	}
+
+}

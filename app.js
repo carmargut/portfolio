@@ -26,7 +26,6 @@ http.get("/",(req,res) => {
   res.redirect("https://carmargut.com");
 });
 app.get("/",(req, res) => {
-  console.log("hola");
     res.render("index",{});
 });
 
