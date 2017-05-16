@@ -4136,9 +4136,9 @@ ul.actions.vertical li {
 /* Scrolling progress bar */
 /**************************/
 .ProgressBar {
-	position: absolute;
-  top: 147px;
-  left: 10%;
+	position : fixed;
+	 top : 25px;
+  left: 11%;
 	margin-top: 15%;
 }
 

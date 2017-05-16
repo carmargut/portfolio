@@ -1,6 +1,5 @@
 
 $(document).ready(function() {
-
   var html;
   var total = $(".js-Content .js-Content-text").length;
 
@@ -28,11 +27,6 @@ $(document).ready(function() {
     var top = $(this).scrollTop();
     var bottom = top + $(window).height();
 
-    if( $('.js-Content').offset().top - top <= 10){
-      $('.js-ProgressBar').css({position : 'fixed', top : '25px'})
-    }else{
-      $('.js-ProgressBar').css({position : 'absolute', top : '147px'})
-    }
 
     $(".js-Content .js-Content-text").each(function(i){
       var this_top = $(this).offset().top;
@@ -63,7 +57,6 @@ $(document).ready(function() {
     })
 
   })
-
 })
 
 pace.start()
