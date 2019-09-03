@@ -17,19 +17,19 @@ app.use(favicon(path.join(__dirname, 'public', 'favicon.ico')));
 
 var credentials = {
   key: fs.readFileSync(config.private_key),
-  cert: fs.readFileSync(config.certificate),
-  ca: fs.readFileSync(config.ca_bundle)
+  cert: fs.readFileSync(config.certificate)
+  //,  ca: fs.readFileSync(config.ca_bundle)
 }
 var server = https.createServer(credentials, app);
 
 http.get("/",(req,res) => {
-  res.redirect("https://carmargut.com");
+  res.redirect("http://localhost:8080");
 });
 app.get("/",(req, res) => {
     res.render("index",{});
 });
 
-http.listen(80,() => {});
-server.listen(config.port, () => {
-    console.log("Servidor corriendo en el puerto " + config.port);
+http.listen(config.httpPort,() => {});
+server.listen(config.httpsPort, () => {
+    console.log("Servidor corriendo en el puerto " + config.httpsPort);
 });
