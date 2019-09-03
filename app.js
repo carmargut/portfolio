@@ -23,7 +23,7 @@ var credentials = {
 var server = https.createServer(credentials, app);
 
 http.get("/",(req,res) => {
-  res.redirect("http://localhost:8080");
+  res.redirect("https://localhost");
 });
 app.get("/",(req, res) => {
     res.render("index",{});
